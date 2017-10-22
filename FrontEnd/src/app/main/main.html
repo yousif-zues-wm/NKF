@@ -224,115 +224,223 @@
 
     <h5>Monthly Household Expenses</h5>
     <label for="">Rent/Mortgage</label>
-    <input type="number" ng-change='getHouseMonthlyCosts()'class='form-control' name="rentmortgage" ng-model='rentmortgage' value="0" placeholder="Rent/Mortgage">
+    <div class="input-group">
+      <span class="input-group-addon">$</span>
+        <input type="number" ng-change='getHouseMonthlyCosts()'class='form-control' name="rentmortgage" ng-model='rentmortgage' min="0.01" step="0.01" value="0" placeholder="Rent/Mortgage">
+    </div>
+
     <h5>Utilities</h5>
     <label for="">Phone Bill</label>
-    <input type="number" ng-change='getHouseMonthlyCosts()'class='form-control' name="phonebill" ng-model='phonebill' value="0" placeholder="Phone Bill">
-    <form id="form" method="post" action="">
-    <p>
-        <label for="amount">Enter amount</label>
-        <div class="flex">
-            <span class="form-control-currency">$</span>
-            <input id="amount" name="amount" class='form control' type="text" maxlength="15" />
-        </div>
-    </p>
-</form>
+    <div class='input-group'>
+        <span class="input-group-addon">$</span>
+        <input type="number" ng-change='getHouseMonthlyCosts()'class='form-control' name="phonebill" ng-model='phonebill' value="0" placeholder="Phone Bill">
+    </div>
     <label for="">Gas Bill</label>
+    <div class='input-group'>
+        <span class="input-group-addon">$</span>
     <input type="number" ng-change='getHouseMonthlyCosts()'class='form-control' name="gasbill" ng-model='gasbill' value="0" placeholder="Gas Bill">
+    </div>
     <label for="">Electric Bill</label>
+    <div class='input-group'>
+        <span class="input-group-addon">$</span>
     <input type="number" ng-change='getHouseMonthlyCosts()'class='form-control' name="electricbill" ng-model='electricbill' value="0" placeholder="Electric Bill">
+    </div>
     <label for="">Water Bill</label>
+    <div class='input-group'>
+        <span class="input-group-addon">$</span>
     <input type="number" ng-change='getHouseMonthlyCosts()'class='form-control' name="waterbill" ng-model='waterbill' value="0" placeholder="Water Bill">
+    </div>
     <h5>Auto</h5>
     <label for="">Payment</label>
+    <div class='input-group'>
+        <span class="input-group-addon">$</span>
     <input type="number" ng-change='getHouseMonthlyCosts()'class='form-control' name="payment" ng-model='payment' value="0" placeholder="Payment">
+    </div>
     <label for="">Gas & Oil</label>
+    <div class='input-group'>
+        <span class="input-group-addon">$</span>
     <input type="number" ng-change='getHouseMonthlyCosts()'class='form-control' name="gasoil" ng-model='gasoil' value="0" placeholder="Gas & Oil">
+    </div>
     <label for="">Insurance</label>
+    <div class='input-group'>
+        <span class="input-group-addon">$</span>
     <input type="number" ng-change='getHouseMonthlyCosts()'class='form-control' name="insurance" ng-model='insurance' value="0" placeholder="Insurance">
+    </div>
     <label for="">Repairs</label>
+    <div class='input-group'>
+        <span class="input-group-addon">$</span>
     <input type="number" ng-change='getHouseMonthlyCosts()'class='form-control' name="repairs" ng-model='repairs' value="0" placeholder="Repairs">
+    </div>
     <h5>Medical</h5>
     <label for="">Doctor</label>
+    <div class='input-group'>
+        <span class="input-group-addon">$</span>
     <input type="number" ng-change='getHouseMonthlyCosts()'class='form-control' name="doctor" ng-model='doctor' value="0" placeholder="Doctor">
+    </div>
     <label for="">Hospital</label>
-    <input type="number" ng-change='getHouseMonthlyCosts()'class='form-control' name="hospital" ng-model='hospital' value="0" placeholder="Hosptial">
+    <div class='input-group'>
+        <span class="input-group-addon">$</span>
+        <input type="number" ng-change='getHouseMonthlyCosts()'class='form-control' name="hospital" ng-model='hospital' value="0" placeholder="Hosptial">
+    </div>
     <label for="">Medicines</label>
+    <div class='input-group'>
+        <span class="input-group-addon">$</span>
     <input type="number" ng-change='getHouseMonthlyCosts()'class='form-control' name="medicines" ng-model='medicines' value="0" placeholder="Medicines">
+    </div>
     <h5>Insurance</h5>
     <label for="">Life Insurance</label>
-    <input type="number" ng-change='getHouseMonthlyCosts()'class='form-control' name="linsurance" ng-model='linsurance' value="" placeholder="Life Insurance">
+    <div class='input-group'>
+        <span class="input-group-addon">$</span>
+    <input type="number" ng-change='getHouseMonthlyCosts()'class='form-control' name="linsurance" ng-model='linsurance' value="0" placeholder="Life Insurance">
+    </div>
     <label for="">Medical Insurance</label>
-    <input type="number" ng-change='getHouseMonthlyCosts()'class='form-control' name="minsurance" ng-model='minsurance' value="" placeholder="Medical Insurance">
+    <div class='input-group'>
+        <span class="input-group-addon">$</span>
+    <input type="number" ng-change='getHouseMonthlyCosts()'class='form-control' name="minsurance" ng-model='minsurance' value="0" placeholder="Medical Insurance">
+    </div>
     <label for="">Total: {{total}}</label>
     <h5>Monthly Household Income</h5>
     <!-- checks if they have a spouse, if they do they will need to add the financial information of teh spouse-->
     <label for="">Check if you have any other source of household income from family members not including your spouse.</label>
     <input type="checkbox" name="othersourceofincome" value="true">
     <br><label for="">Employement (Net)</label>
-    <input type="text" class='form-control' name="netemployment" ng-model='netemployment' value="" placeholder="Employment (Net)">
+    <div class='input-group'>
+        <span class="input-group-addon">$</span>
+    <input type="text" ng-change='getMonthlyIncome()'class='form-control'  name="netemployment" ng-model='netemployment' value="0" placeholder="Employment (Net)">
+    </div>
     <label for="">Social Security Disability</label>
-    <input type="text" class='form-control' name="ssd" ng-model='ssd' value="" placeholder="Social Security Disability">
+    <div class='input-group'>
+        <span class="input-group-addon">$</span>
+    <input type="text" ng-change='getMonthlyIncome()'class='form-control' name="ssd" ng-model='ssd' value="0" placeholder="Social Security Disability">
+    </div>
     <label for="">SSI</label>
-    <input type="text" class='form-control' name="ssi" ng-model='ssi' value="" placeholder="SSI">
+    <div class='input-group'>
+        <span class="input-group-addon">$</span>
+    <input type="text" ng-change='getMonthlyIncome()'class='form-control' name="ssi" ng-model='ssi' value="0" placeholder="SSI">
+    </div>
     <label for="">ADC</label>
-    <input type="text" class='form-control' name="adc" ng-model='adc' value="" placeholder="ADC">
+    <div class='input-group'>
+        <span class="input-group-addon">$</span>
+    <input type="text" ng-change='getMonthlyIncome()'class='form-control' name="adc" ng-model='adc' value="0" placeholder="ADC">
+    </div>
     <label for="">Food stamps</label>
-    <input type="text" class='form-control' name="foodstamps" ng-model='foodstamps' value="" placeholder="Food Stamps">
-    <label for="">Other:</label>
+    <div class='input-group'>
+        <span class="input-group-addon">$</span>
+    <input type="text" ng-change='getMonthlyIncome()'class='form-control' name="foodstamps" ng-model='foodstamps' value="0" placeholder="Food Stamps">
+</div>
+    <label for="">Other (type list then enter price on next line)</label>
     <textarea class='form-control' name="name" rows="8" cols="80"></textarea>
+    <div class='input-group'>
+        <span class="input-group-addon">$</span>
+    <input type="text" ng-change='getMonthlyIncome()'class='form-control' name="other" ng-model='other' value="" placeholder="Other">
+
+</div>
     <br>
 
     <div ng-show='hidemF'>
         <h5>Source of Household Income from Spouse</h5><br><br>
         <br><label for="">Employement (Net)</label>
+        <div class='input-group'>
+            <span class="input-group-addon">$</span>
         <input type="text" class='form-control' name="snetemployment" ng-model='snetemployment' value="" placeholder="Employment (Net)">
+    </div>
         <label for="">Social Security Disability</label>
+        <div class='input-group'>
+            <span class="input-group-addon">$</span>
         <input type="text" class='form-control' name="sssd" ng-model='sssd' value="" placeholder="Social Security Disability">
+    </div>
         <label for="">SSI</label>
+        <div class='input-group'>
+            <span class="input-group-addon">$</span>
         <input type="text" class='form-control' name="sssi" ng-model='sssi' value="" placeholder="SSI">
+    </div>
         <label for="">ADC</label>
+        <div class='input-group'>
+            <span class="input-group-addon">$</span>
         <input type="text" class='form-control' name="sadc" ng-model='sadc' value="" placeholder="ADC">
+    </div>
         <label for="">Food stamps</label>
+        <div class='input-group'>
+            <span class="input-group-addon">$</span>
         <input type="text" class='form-control' name="sfoodstamps" ng-model='sfoodstamps' value="" placeholder="Food Stamps">
+    </div>
         <label for="">Other:</label>
+        <div class='input-group'>
+            <span class="input-group-addon">$</span>
         <textarea class='form-control' name="name" rows="8" cols="80"></textarea>
+    </div>
     </div>
 
     <div ng-show='hidemF'>
         <h5>Other Source of Household Income</h5><br><br>
         <br><label for="">Employement (Net)</label>
+        <div class='input-group'>
+            <span class="input-group-addon">$</span>
         <input type="text" class='form-control' name="onetemployment" ng-model='onetemployment' value="" placeholder="Employment (Net)">
+    </div>
         <label for="">Social Security Disability</label>
+        <div class='input-group'>
+            <span class="input-group-addon">$</span>
         <input type="text" class='form-control' name="ossd" ng-model='ossd' value="" placeholder="Social Security Disability">
+    </div>
         <label for="">SSI</label>
         <input type="text" class='form-control' name="ossi" ng-model='ossi' value="" placeholder="SSI">
+        <div class='input-group'>
+            <span class="input-group-addon">$</span>
+        </div>
         <label for="">ADC</label>
+        <div class='input-group'>
+            <span class="input-group-addon">$</span>
+        </div>
         <input type="text" class='form-control' name="oadc" ng-model='oadc' value="" placeholder="ADC">
+        <div class='input-group'>
+            <span class="input-group-addon">$</span>
+        </div>
         <label for="">Food stamps</label>
+        <div class='input-group'>
+            <span class="input-group-addon">$</span>
+        </div>
         <input type="text" class='form-control' name="ofoodstamps" ng-model='ofoodstamps' value="" placeholder="Food Stamps">
+        <div class='input-group'>
+            <span class="input-group-addon">$</span>
+        </div>
         <label for="">Other:</label>
+        <div class='input-group'>
+            <span class="input-group-addon">$</span>
         <textarea class='form-control' name="name" rows="8" cols="80"></textarea>
+    </div>
     </div>
 
     <label for="">Total Amount of Income: {{totalIncome}}</label>
 
     <h5>Total Amount of Assets</h5>
     <label for="">Checking Account Balance</label>
+    <div class='input-group'>
+        <span class="input-group-addon">$</span>
     <input type="text" class='form-control' name="cabalance" ng-model='cabalance' value="" placeholder="Checking Account Balance">
+</div>
     <label for="">Savings Account Balance</label>
+    <div class='input-group'>
+        <span class="input-group-addon">$</span>
     <input type="text" class='form-control' name="sabalance" ng-model='sabalance' value="" placeholder="Savings Account Balance">
+</div>
     <label for="">Home Assessed Value</label>
+    <div class='input-group'>
+        <span class="input-group-addon">$</span>
     <input type="text" class='form-control' name="homevalue" ng-model='homevalue' value="" placeholder="Home Assessed Value">
+</div>
     <label for="">Car Year</label>
     <input type="text" class='form-control' name="caryear" ng-model='caryear' value="" placeholder="Car Year">
     <label for="">Car Make</label>
     <input type="text" class='form-control' name="carmake" ng-model='carmake' value="" placeholder="Car Make">
     <!-- get leinholder from previous if necessary -->
     <label for="">Other property such as stocks, bonds, real estate, etc.</label>
+    <div class='input-group'>
+        <span class="input-group-addon">$</span>
     <input type="text" class='form-control' name="prop" ng-model='prop' value="" placeholder="Other Assets">
+</div>
     <label for="">Electronic Signature</label>
-    <input type="text" class='form-control' name="esignature" ng-model='esignature' value="" placeholder="Electronic Signature">
+    <input type="text" class='form-control' name="esignature" ng-model='esignature' value="" placeholder="Electronic Signature"><br>
     <!-- optional demographic information?-->
 </div>
 
@@ -404,7 +512,6 @@
       <input placeholder="Other" type="text" class="form-control" id="amount_actual" name="group101" maxlength="5" data-rule-required="true" contenteditable="false">
     </div>
   </div>
-
   <label>Applicant</label>
   <input type="text" class='form-control' name="" ng-model='applicant.sign' value="" placeholder="Signature">
   <input type="text" class='form-control' name="" ng-model='date' value="" placeholder="Date">
@@ -412,22 +519,12 @@
   <input type="text" class='form-control' name="" ng-model='rep.sign' value="" placeholder="Signature">
   <input type="text" class='form-control' name="" ng-model='rep.name' value="" placeholder="Print Name">
   <input type="text" class='form-control' name="" ng-model='facility' value="" placeholder="Facility"><br><br>
-
-
   <button type="button" class='btn btn-default' ng-click='show()' name="button">Next</button><br><br><br>
 </div>
-
 </center>
-
-
-
 <div class="footer">
   <a href="https://azkidney.org/privacy-statement">Privacy Statement | </a>
   <a href="https://azkidney.org/terms-of-use">Terms of Use | </a>
   <a href="https://azkidney.org/contact-us">Contact Us  </a>
 </div>
-
-
-
-
 </div>

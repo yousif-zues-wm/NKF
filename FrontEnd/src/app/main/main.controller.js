@@ -40,7 +40,13 @@
     $scope.nums = 0
     $scope.contentNums = 0
     $scope.getHouseMonthlyCosts =0
-    $scope.totalIncome = 0;
+    $scope.totalIncome = 0
+    $scope.netemployment = 0
+    $scope.ssd = 0
+    $scope.ssi = 0
+    $scope.adc = 0
+    $scope.foodstamps = 0
+    $scope.other = 0
 
     $scope.show = function(){
        $scope.hidemF = hidemF == true ? hidemF = false : hidemF = true
@@ -66,8 +72,33 @@
     $scope.getHouseMonthlyCosts = function(){
         // $log.log('ass')
         // $scope.total = 0;
-        $scope.total = $scope.doctor  +  $scope.rentmortgage + $scope.phonebill + $scope.gasbill + $scope.electricbill + $scope.waterbill + $scope.payment + $scope.gasoil + $scope.insurance + $scope.repairs + $scope.doctor +   $scope.medicines + $scope.hospital + $scope.linsurance + $scope.minsurance
+
+        $scope.total = parseInt($scope.doctor)  +  parseInt($scope.rentmortgage )+ parseInt($scope.phonebill) + parseInt($scope.gasbill) + parseInt($scope.electricbill) + parseInt($scope.waterbill)
+         + parseInt($scope.payment) + parseInt($scope.gasoil) + parseInt($scope.insurance)+ parseInt($scope.repairs) + parseInt($scope.doctor) +   parseInt($scope.medicines )
+         + parseInt($scope.hospital) + parseInt($scope.linsurance) + parseInt($scope.minsurance);
+         if($scope.total === NaN) {
+             $scope.total = "Please input all values.";
+         }
+
+
+
+        //  $scope.totalarr = parseInt($scope.doctor),  parseInt($scope.rentmortgage ), parseInt($scope.phonebill), parseInt($scope.gasbill), parseInt($scope.electricbill), parseInt($scope.waterbill),
+        //  parseInt($scope.payment), parseInt($scope.gasoil), parseInt($scope.insurance), parseInt($scope.repairs), parseInt($scope.doctor),   parseInt($scope.medicines ),
+        //  parseInt($scope.hospital), parseInt($scope.linsurance), parseInt($scope.minsurance);
+        //  for(var i = 0; i < $scope.total.length; i++) {
+        //      $log.log("FUCK")
+        //      if($scope.totalarr[i] == undefined || $scope.totalarr[i] == null) {
+        //          $scope.totalarr[i] = 0;
+        //      }
+        //  }
+
     }
+
+    $scope.getMonthlyIncome = function(){
+        $scope.totalIncome = parseInt($scope.netemployment) + parseInt($scope.ssd) + parseInt($scope.ssi) + parseInt($scope.adc) + parseInt($scope.foodstamps) + parseInt($scope.other);
+    }
+
+
 
   }
 })();
