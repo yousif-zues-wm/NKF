@@ -2,6 +2,14 @@ body, input[type="text"]{
     font-family: "Open Sans";
 }
 
+label{
+    text-align: left;
+}
+
+div{
+    text-align: left;
+}
+
 .browsehappy {
   margin: 0.2em 0;
   background: #ccc;
@@ -45,7 +53,7 @@ body, input[type="text"]{
 
 .navbar {
     margin-bottom: 0;
-    background-color: #f4511e;
+    background-color: #ffffff;
     border: 0;
     font-size: 12px !important;
     line-height: 1.42857143 !important;

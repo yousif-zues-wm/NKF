@@ -1,12 +1,7 @@
 <nav class="navbar navbar-default navbar-fixed-top">
   <div class="container">
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="#">Logo</a>
+      <a class="navbar-brand" href="#"><img src="assets/images/nationalkidneyredo.png" width="400" height="120"/></a>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
@@ -36,22 +31,36 @@
 <div class="container">
 <center>
 <div ng-show='!hidemF' class=''>
-<h1>Form One</h1><br>
+<br><h1>Basic Information</h1><br>
 
 
-  <label for="fname">First Name</label>  <input type="text" class='form-control' name="fname" ng-model='data.fname' value="" placeholder='Firstname'>
-    <input type="text" class='form-control' name="" ng-model='data.lname' value="" placeholder='Lastname'>
+    <label for="fname">First Name</label>
+    <input type="text" class='form-control' name="fname" ng-model='data.fname' value="" placeholder='First Name'>
+    <label for="mname">Middle Name</label>
+    <input type="text" class='form-control' name="" ng-model='data.mname' value="true" placeholder='Middle Name'>
+    <input type="radio" name='mnamebutton' ng-model="data.mname" value="false">I don't have a middle name<br>
+    <label for="lname">Last Name</label>
+    <input type="text" class='form-control' name="" ng-model='data.lname' value="" placeholder='Last Name'>
+    <label for="address">Address</label>
     <input type="text" class='form-control' name="" ng-model='data.addr' value="" placeholder='Address'>
+    <label for="maddress">Mailing Address</label>
+    <!-- add check box to keep same as above -->
     <input type="text" class='form-control' name="" ng-model='data.maddr' value="" placeholder='Mailing Address'>
+    <label for="dob">Date of Birth</label>
     <input type="date" class='form-control' name="" ng-model='data.dob' value="" placeholder='Date of Birth'>
+    <label for="sworker">Social Worker</label>
     <input type="text" class='form-control' name="" ng-model='data.sworker' value="" placeholder='Social Worker'>
+    <label for="signature">Signature</label>
     <input type="text" class='form-control' name="" ng-model='data.sign' value="" placeholder='Signature'>
+    <label for="phone">Phone</label>
     <input type="text" class='form-control' name="" ng-model='data.phone' value="" placeholder='Phone'>
-    <label for="rad">Spouse</label>
-    <input type="radio" name='rad' ng-model="data.spouse" value="true">Yes
-  <input type="radio" name='rad' ng-model="data.spouse" value="false">No
+    <label for="spouse">Spouse</label>
+    <input type="text" class='form-control' name="" ng-model='data.spouse' value="" placeholder='Spouse'>
+    <!--<input type="radio" name='rad' ng-model="data.spouse" value="true">Yes-->
+  <input type="radio" name='rad' ng-model="data.spouse" value="false">I don't have a spouse
+  <!-- how to greyout a text field if a certain button is clicked -->
   </form>
-  <button type="button" class='btn btn-default' ng-click='show()' name="button">Next</button>
+  <button type="button" class='btn btn-default' ng-click='show()' name="button">Next</button><br><br><br>
 </div>
 
 
