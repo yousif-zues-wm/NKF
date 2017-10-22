@@ -219,7 +219,7 @@
               <span class="input-group-addon">$</span>
           <input type="number" ng-change='getHouseMonthlyCosts()'class='form-control' name="minsurance" ng-model='minsurance' value="" placeholder="{{medicalInsurancePlaceholder}}">
           </div>
-          <label for="">{{totalPlaceholder}} {{total}}</label>
+          <label for="">{{totalPlaceholder}} ${{total}}</label>
           <h5>{{mpiPlaceholder}}</h5>
           <!-- checks if they have a spouse, if they do they will need to add the financial information of teh spouse-->
           <input type="checkbox" name="othersourceofincome" value="true"><label for="">{{mhiTextPlaceholder}}</label>
@@ -330,7 +330,7 @@
           </div>
           </div>
 
-          <label for="">{{totalIncomePlaceholder}}: {{totalIncome}}</label>
+          <label for="">{{totalIncomePlaceholder}}: ${{totalIncome}}</label>
 
           <h5>{{totalAssetsPlaceholder}}</h5>
           <label for="">{{cabalancePlaceholder}}</label>
@@ -631,7 +631,7 @@
         <span class="input-group-addon">$</span>
     <input type="number" ng-change='getHouseMonthlyCosts()'class='form-control' name="minsurance" ng-model='minsurance' value="0" placeholder="Medical Insurance">
     </div>
-    <label for="">Total: {{total}}</label>
+    <label for="">Total: ${{total}}</label>
     <h5>Monthly Household Income</h5>
     <!-- checks if they have a spouse, if they do they will need to add the financial information of teh spouse-->
     <label for="">Check if you have any other source of household income from family members not including your spouse.</label>
@@ -744,7 +744,7 @@
     </div>
     </div>
 
-    <label for="">Total Amount of Income: {{totalIncome}}</label>
+    <label for="">Total Amount of Income: ${{totalIncome}}</label>
 
     <h5>Total Amount of Assets</h5>
     <label for="">Checking Account Balance</label>

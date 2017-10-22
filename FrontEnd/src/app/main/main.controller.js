@@ -47,7 +47,7 @@
     $scope.adc = 0
     $scope.foodstamps = 0
     $scope.other = 0
-
+    $scope.dollarBill = '$'
     $scope.show = function(){
        $scope.hidemF = hidemF == true ? hidemF = false : hidemF = true
     }
@@ -98,124 +98,119 @@
         $scope.totalIncome = parseInt($scope.netemployment) + parseInt($scope.ssd) + parseInt($scope.ssi) + parseInt($scope.adc) + parseInt($scope.foodstamps) + parseInt($scope.other);
     }
 
+    $scope.radioChecked = function ()
+      {
 
+          $scope.infoPlaceholder = "Patient's Info"
+          $scope.spousePlaceholder = "Spouse's Info";
+          $scope.lNamePlaceholder="Last Name";
+          $scope.fNamePlaceholder="First Name";
+          $scope.mNamePlaceholder="Middle Name";
+          $scope.dobPlaceholder="Date of Birth";
+          $scope.addressPlaceholder="Mailing Address";
+          $scope.lengthPlaceholder="How Long";
+          $scope.phonePlaceholder="Phone Number";
+          $scope.cityPlaceholder="City";
+          $scope.statePlaceholder="State";
+          $scope.zipPlaceholder="Zip";
+          $scope.fmembersPlaceholder="Family Members";
+          $scope.relationshipPlaceholder="Relationship";
+          $scope.employedPlaceholder="Employed By";
+          $scope.studentPlaceholder="Student";
+          $scope.llPlaceholder="Landlord";
+          $scope.lhPlaceholder="Leinholder";
+          $scope.mhePlaceholder="Monthly Household Expenses";
+          $scope.rmPlaceholder="Rent/Mortgage";
+          $scope.utilPlaceholder="Utilities";
+          $scope.phoneBillPlaceholder="Phone Bill";
+          $scope.gasBillPlaceholder="Gas Bill";
+          $scope.electricBillPlaceholder="Electric Bill";
+          $scope.waterBillPlaceholder="Water Bill";
+          $scope.autoPlaceholder="Auto";
+          $scope.paymentPlaceholder="Payment";
+          $scope.gasOilPlaceholder="Gas & Oil";
+          $scope.insurPlaceholder="Insurance";
+          $scope.repairPlaceholder="Repairs";
+          $scope.medicalPlaceholder="Medical";
+          $scope.doctorPlaceholder="Doctor";
+          $scope.hospitalPlaceholder="Hospital";
+          $scope.medicinePlaceholder="Medicines";
+          $scope.insurancePlaceholder="Insurance";
+          $scope.lifeInsurancePlaceholder="Life Insurance";
+          $scope.medicalInsurancePlaceholder="Medical Insurance";
+          $scope.totalPlaceholder="Total:";
+          $scope.mpiPlaceholder="Monthly Patient Income";
+          $scope.msiPlaceholder="Monthly Spouse Income";
+          $scope.moiPlaceholder="Monthly Other Income";
+          $scope.mhiTextPlaceholder="Check if you have any source of household income from maily members not including your spouse";
+          $scope.employmentNetPlaceholder="Employment (Net)";
+          $scope.ssdPlaceholder="Social Security Disability";
+          $scope.ssiPlaceholder="SSI";
+          $scope.adcPlaceholder="ADC";
+          $scope.foodStampsPlaceholder="Food Stamps";
+          $scope.otherIncomePlaceholder="Other (type list then enter pricce on next line)";
+          $scope.totalIncomePlaceholder="Total Amont of Income:";
+          $scope.totalAssetsPlaceholder="Total Amount of Assets";
+          $scope.cabalancePlaceholder="Checking Account Balance";
+          $scope.sabalancePlaceholder="Savings Account Balance";
+          $scope.homevaluePlaceholder="Home Assessed Value";
+      }
 
-  }
-
-  $scope.radioChecked = function ()
-    {
-
-        $scope.infoPlaceholder = "Patient's Info"
-        $scope.spousePlaceholder = "Spouse's Info";
-        $scope.lNamePlaceholder="Last Name";
-        $scope.fNamePlaceholder="First Name";
-        $scope.mNamePlaceholder="Middle Name";
-        $scope.dobPlaceholder="Date of Birth";
-        $scope.addressPlaceholder="Mailing Address";
-        $scope.lengthPlaceholder="How Long";
-        $scope.phonePlaceholder="Phone Number";
-        $scope.cityPlaceholder="City";
-        $scope.statePlaceholder="State";
-        $scope.zipPlaceholder="Zip";
-        $scope.fmembersPlaceholder="Family Members";
-        $scope.relationshipPlaceholder="Relationship";
-        $scope.employedPlaceholder="Employed By";
-        $scope.studentPlaceholder="Student";
-        $scope.llPlaceholder="Landlord";
-        $scope.lhPlaceholder="Leinholder";
-        $scope.mhePlaceholder="Monthly Household Expenses";
-        $scope.rmPlaceholder="Rent/Mortgage";
-        $scope.utilPlaceholder="Utilities";
-        $scope.phoneBillPlaceholder="Phone Bill";
-        $scope.gasBillPlaceholder="Gas Bill";
-        $scope.electricBillPlaceholder="Electric Bill";
-        $scope.waterBillPlaceholder="Water Bill";
-        $scope.autoPlaceholder="Auto";
-        $scope.paymentPlaceholder="Payment";
-        $scope.gasOilPlaceholder="Gas & Oil";
-        $scope.insurPlaceholder="Insurance";
-        $scope.repairPlaceholder="Repairs";
-        $scope.medicalPlaceholder="Medical";
+      $scope.radiounChecked = function ()
+      {
+        $scope.infoPlaceholder = "Infomación de Patiente"
+        $scope.spousePlaceholder = "Información de Esposo/a";
+        $scope.lNamePlaceholder="Apellido del pacienta";
+        $scope.fNamePlaceholder="Nombre";
+        $scope.mNamePlaceholder="Segundo nombre";
+        $scope.dobPlaceholder="Fecha de nacimiento";
+        $scope.addressPlaceholder="Dirección";
+        $scope.lengthPlaceholder="Por cuánto tiempo";
+        $scope.phonePlaceholder="Número de teléfono";
+        $scope.cityPlaceholder="Ciudad";
+        $scope.statePlaceholder="Estado";
+        $scope.zipPlaceholder="Código postal";
+        $scope.fmembersPlaceholder="Lista de todas las personas que viven con usted";
+        $scope.relationshipPlaceholder="Relación con usted";
+        $scope.employedPlaceholder="Relación con usted Empleado por";
+        $scope.studentPlaceholder="Estudiante";
+        $scope.llPlaceholder="Renta";
+        $scope.lhPlaceholder="Dueño";
+        $scope.mhePlaceholder="Los Gastos Mensuales de la Casa";
+        $scope.rmPlaceholder="Renta";
+        $scope.utilPlaceholder="Servicios públicos";
+        $scope.phoneBillPlaceholder="Teléfono";
+        $scope.gasBillPlaceholder="Gas";
+        $scope.electricBillPlaceholder="Electricidad";
+        $scope.waterBillPlaceholder="Agua";
+        $scope.autoPlaceholder="Automóvil";
+        $scope.paymentPlaceholder="Pago Mensual";
+        $scope.gasOilPlaceholder="Gasolino & Aceite";
+        $scope.insurPlaceholder="Seguro";
+        $scope.repairPlaceholder="Arreglos";
+        $scope.medicalPlaceholder="Médico";
         $scope.doctorPlaceholder="Doctor";
         $scope.hospitalPlaceholder="Hospital";
-        $scope.medicinePlaceholder="Medicines";
-        $scope.insurancePlaceholder="Insurance";
-        $scope.lifeInsurancePlaceholder="Life Insurance";
-        $scope.medicalInsurancePlaceholder="Medical Insurance";
-        $scope.totalPlaceholder="Total:";
-        $scope.mpiPlaceholder="Monthly Patient Income";
-        $scope.msiPlaceholder="Monthly Spouse Income";
-        $scope.moiPlaceholder="Monthly Other Income";
-        $scope.mhiTextPlaceholder="Check if you have any source of household income from maily members not including your spouse";
-        $scope.employmentNetPlaceholder="Employment (Net)";
-        $scope.ssdPlaceholder="Social Security Disability";
+        $scope.medicinePlaceholder="Medicina/recetas";
+        $scope.insurancePlaceholder="Seguro";
+        $scope.lifeInsurancePlaceholder="Vida";
+        $scope.medicalInsurancePlaceholder="Médico";
+        $scope.totalPlaceholder="Totalice de los gastos mensuales";
+        $scope.mpiPlaceholder="Los Ingresos Mensuales del Paciente";
+        $scope.msiPlaceholder="Los Ingresos Mensuales del Esposo/a";
+        $scope.moiPlaceholder="Los Ingresos Mensuales de los Otros";
+        $scope.mhiTextPlaceholder="Verifique si tiene alguna fuente de ingresos del hogar de los miembros de la familia sin incluir a su cónyuge";
+        $scope.employmentNetPlaceholder="Empleo (después de los impuestos)";
+        $scope.ssdPlaceholder="Seguro Social Desabilitado";
         $scope.ssiPlaceholder="SSI";
-        $scope.adcPlaceholder="ADC";
-        $scope.foodStampsPlaceholder="Food Stamps";
-        $scope.otherIncomePlaceholder="Other (type list then enter pricce on next line)";
-        $scope.totalIncomePlaceholder="Total Amont of Income:";
-        $scope.totalAssetsPlaceholder="Total Amount of Assets";
-        $scope.cabalancePlaceholder="Checking Account Balance";
-        $scope.sabalancePlaceholder="Savings Account Balance";
-        $scope.homevaluePlaceholder="Home Assessed Value";
-        $scope.apply();
-    }
-
-    $scope.radiounChecked = function ()
-    {
-      $scope.infoPlaceholder = "Infomación de Patiente"
-      $scope.spousePlaceholder = "Información de Esposo/a";
-      $scope.lNamePlaceholder="Apellido del pacienta";
-      $scope.fNamePlaceholder="Nombre";
-      $scope.mNamePlaceholder="Segundo nombre";
-      $scope.dobPlaceholder="Fecha de nacimiento";
-      $scope.addressPlaceholder="Dirección";
-      $scope.lengthPlaceholder="Por cuánto tiempo";
-      $scope.phonePlaceholder="Número de teléfono";
-      $scope.cityPlaceholder="Ciudad";
-      $scope.statePlaceholder="Estado";
-      $scope.zipPlaceholder="Código postal";
-      $scope.fmembersPlaceholder="Lista de todas las personas que viven con usted";
-      $scope.relationshipPlaceholder="Relación con usted";
-      $scope.employedPlaceholder="Relación con usted Empleado por";
-      $scope.studentPlaceholder="Estudiante";
-      $scope.llPlaceholder="Renta";
-      $scope.lhPlaceholder="Dueño";
-      $scope.mhePlaceholder="Los Gastos Mensuales de la Casa";
-      $scope.rmPlaceholder="Renta";
-      $scope.utilPlaceholder="Servicios públicos";
-      $scope.phoneBillPlaceholder="Teléfono";
-      $scope.gasBillPlaceholder="Gas";
-      $scope.electricBillPlaceholder="Electricidad";
-      $scope.waterBillPlaceholder="Agua";
-      $scope.autoPlaceholder="Automóvil";
-      $scope.paymentPlaceholder="Pago Mensual";
-      $scope.gasOilPlaceholder="Gasolino & Aceite";
-      $scope.insurPlaceholder="Seguro";
-      $scope.repairPlaceholder="Arreglos";
-      $scope.medicalPlaceholder="Médico";
-      $scope.doctorPlaceholder="Doctor";
-      $scope.hospitalPlaceholder="Hospital";
-      $scope.medicinePlaceholder="Medicina/recetas";
-      $scope.insurancePlaceholder="Seguro";
-      $scope.lifeInsurancePlaceholder="Vida";
-      $scope.medicalInsurancePlaceholder="Médico";
-      $scope.totalPlaceholder="Totalice de los gastos mensuales";
-      $scope.mpiPlaceholder="Los Ingresos Mensuales del Paciente";
-      $scope.msiPlaceholder="Los Ingresos Mensuales del Esposo/a";
-      $scope.moiPlaceholder="Los Ingresos Mensuales de los Otros";
-      $scope.mhiTextPlaceholder="Verifique si tiene alguna fuente de ingresos del hogar de los miembros de la familia sin incluir a su cónyuge";
-      $scope.employmentNetPlaceholder="Empleo (después de los impuestos)";
-      $scope.ssdPlaceholder="Seguro Social Desabilitado";
-      $scope.ssiPlaceholder="SSI";
-      $scope.adcPlaceholder="DES/TANF";
-      $scope.foodStampsPlaceholder="Cupones de alimento";
-      $scope.otherIncomePlaceholder="Otros gastos (lista)";
-      $scope.totalIncomePlaceholder="Totalice los ingresos mensuales (suma las 3 columnas):";
-      $scope.totalAssetsPlaceholder="Bienes";
-      $scope.cabalancePlaceholder="Cuenta corriente";
-      $scope.sabalancePlaceholder="Cuenta de ahorros";
-      $scope.homevaluePlaceholder="Casa(valor)";
-      $scope.apply();
-    }
+        $scope.adcPlaceholder="DES/TANF";
+        $scope.foodStampsPlaceholder="Cupones de alimento";
+        $scope.otherIncomePlaceholder="Otros gastos (lista)";
+        $scope.totalIncomePlaceholder="Totalice los ingresos mensuales (suma las 3 columnas):";
+        $scope.totalAssetsPlaceholder="Bienes";
+        $scope.cabalancePlaceholder="Cuenta corriente";
+        $scope.sabalancePlaceholder="Cuenta de ahorros";
+        $scope.homevaluePlaceholder="Casa(valor)";
+      }
+  }
 })();
