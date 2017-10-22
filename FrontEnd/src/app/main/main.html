@@ -33,7 +33,6 @@
 <div ng-show='!hidemF' class='' id="baseinfo">
 <br><h1>Basic Information</h1><br>
 
-
     <label for="fname">First Name</label>
     <input type="text" class='form-control' name="fname" ng-model='data.fname' value="" placeholder='First Name'>
     <label for="mname">Middle Name</label>
@@ -64,6 +63,340 @@
   <button type="button" class='btn btn-default' ng-click='show()' name="button">Next</button><br><br><br>
 </div>
 
+<div ng-show='!hidemF' class='' id="baseinfo">
+<br><h1>Financial (English/Español)</h1><br>
+
+  <div ng-app="" ng-controller="MainController">
+    <div class="winner-par">
+      <div class="onoffswitch-green2">
+        <input type="radio" id="radios5" name="radiosg5" class="SwitchOn" value="true" checked data-ng-init="radioChecked()" data-ng-click="radioChecked()" />
+        <label for="radios5">English</label>
+        <input type="radio" id="radios6" name="radiosg5" class="SwitchOff" value="false" ng-click="radiounChecked()"/>
+        <label for="radios6">Español</label>
+      </div>
+    </div>
+
+    <label>{{infoPlaceholder}}</label>
+    <input text="text" class='form-control' name="" ng-model='applicant.lName' value="" placeholder="{{lNamePlaceholder}}">
+    <input type="text" class='form-control' name="" ng-model='applicant.fName' value="" placeholder="{{fNamePlaceholder}}">
+    <input type="text" class='form-control' name="" ng-model='applicant.mName' value="" placeholder="{{mNamePlaceholder}}">
+    <input type="date" class='form-control' name="" ng-model='applicant.dob' value="" placeholder="{{dobPlaceholder}}">
+    <label>{{spousePlaceholder}}</label>
+    <input type="text" class='form-control' name="" ng-model='spose.fName' value="" placeholder="{{fNamePlaceholder}}">
+    <input type="date" class='form-control' name="" ng-model='spouse.dob' value="" placeholder="{{dobPlaceholder}}">
+    <label>{{addressPlaceholder}}</label><input type="text" class='form-control' name="" ng-model='address' value="" placeholder="{{addressPlaceholder}}">
+    <label>{{lengthPlaceholder}}</label><input type="text" class='form-control' name="" ng-model='length' value="" placeholder="{{lengthPlaceholder}}">
+    <label>{{phonePlaceholder}}</label><input type="text" class='form-control' name="" ng-model='applicant.phone' value="" placeholder="{{phonePlaceholder}}">
+    <label>{{cityPlaceholder}}</label><input type="text" class='form-control' name="" ng-model='city' value="" placeholder="{{cityPlaceholder}}">
+    <label>{{statePlaceholder}}</label><input type="text" class='form-control' name="" ng-model='state' value="" placeholder="{{statePlaceholder}}">
+    <label>{{zipPlaceholder}}</label><input type="number" class='form-control' name="" ng-model='zip' value="" placeholder="{{zipPlaceholder}}">
+    <label>{{fmembersPlaceholder}}</label><table class="table table-bordered table-condensed">
+        <tbody>
+          <tr>
+            <td><input type="text" class="form-control"   ng-model='fmembers' placeholder="{{fmembersPlaceholder}}" /></td>
+            <td><input type="text" class="form-control"   ng-model='dob' placeholder="{{dobPlaceholder}}" /></td>
+            <td><input type="text" class="form-control"   ng-model='relationship' placeholder="{{relationshipPlaceholder}}" /></td>
+            <td><input type="text" class="form-control"   ng-model='employed' placeholder="{{employedPlaceholder}}" /></td>
+            <td><label>{{studentPlaceholder}}<input type="checkbox" id="check0"  ng-model='check0'/></label></td>
+          </tr>
+          <tr>
+            <td><input type="text" class="form-control"   ng-model='fmembers' placeholder="{{fmembersPlaceholder}}" /></td>
+            <td><input type="text" class="form-control"   ng-model='dob' placeholder="{{dobPlaceholder}}" /></td>
+            <td><input type="text" class="form-control"   ng-model='relationship' placeholder="{{relationshipPlaceholder}}" /></td>
+            <td><input type="text" class="form-control"   ng-model='employed' placeholder="{{employedPlaceholder}}" /></td>
+            <td><label>{{studentPlaceholder}}<input type="checkbox" id="check1" ng-model='check1'/></label></td>
+          </tr>
+          <tr>
+            <td><input type="text" class="form-control"   ng-model='fmembers' placeholder="{{fmembersPlaceholder}}" /></td>
+            <td><input type="text" class="form-control"   ng-model='dob' placeholder="{{dobPlaceholder}}" /></td>
+            <td><input type="text" class="form-control"   ng-model='relationship' placeholder="{{relationshipPlaceholder}}" /></td>
+            <td><input type="text" class="form-control"   ng-model='employed' placeholder="{{employedPlaceholder}}" /></td>
+            <td><label>{{studentPlaceholder}}<input type="checkbox" id="check2" ng-model='check2' /></label></td>
+          </tr>
+          <tr>
+            <td><input type="text" class="form-control"   ng-model='fmembers' placeholder="{{fmembersPlaceholder}}" /></td>
+            <td><input type="text" class="form-control"   ng-model='dob' placeholder="{{dobPlaceholder}}" /></td>
+            <td><input type="text" class="form-control"   ng-model='relationship' placeholder="{{relationshipPlaceholder}}" /></td>
+            <td><input type="text" class="form-control"   ng-model='employed' placeholder="{{employedPlaceholder}}" /></td>
+            <td><label>{{studentPlaceholder}}<input type="checkbox" id="check3" ng-model='check3'/></label></td>
+          </tr>
+          <tr>
+            <td><input type="text" class="form-control"   ng-model='fmembers' placeholder="{{fmembersPlaceholder}}" /></td>
+            <td><input type="text" class="form-control"   ng-model='dob' placeholder="{{dobPlaceholder}}" /></td>
+            <td><input type="text" class="form-control"   ng-model='relationship' placeholder="{{relationshipPlaceholder}}" /></td>
+            <td><input type="text" class="form-control"   ng-model='employed' placeholder="{{employedPlaceholder}}" /></td>
+            <td><label>{{studentPlaceholder}}<input type="checkbox" id="check4" ng-model='check4'/></label></td>
+          </tr>
+          <tr>
+            <td><input type="text" class="form-control"   ng-model='fmembers' placeholder="{{fmembersPlaceholder}}" /></td>
+            <td><input type="text" class="form-control"   ng-model='dob' placeholder="{{dobPlaceholder}}" /></td>
+            <td><input type="text" class="form-control"   ng-model='relationship' placeholder="{{relationshipPlaceholder}}" /></td>
+            <td><input type="text" class="form-control"   ng-model='employed' placeholder="{{employedPlaceholder}}" /></td>
+            <td><label>{{studentPlaceholder}}<input type="checkbox" id="check5" ng-model='check5'/></label></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <!--<div id="addfam"></div>-->
+          <label for="">{{llPlaceholder}}</label>
+          <input type="text" class='form-control' name="ll" ng-model='ll' value="" placeholder="{{studentPlaceholder}}">
+          <label for="">{{lhPlaceholder}}</label>
+          <input type="text" class='form-control' name="lh" ng-model='lh' value="" placeholder="{{studentPlaceholder}}">
+
+          <h5>{{mhePlaceholder}}</h5>
+          <label for="">{{rmPlaceholder}}</label>
+          <div class="input-group">
+            <span class="input-group-addon">$</span>
+              <input type="number" ng-change='getHouseMonthlyCosts()'class='form-control' name="rentmortgage" ng-model='rentmortgage' min="0.01" step="0.01" value="0" placeholder="{{rmPlaceholder}}">
+          </div>
+
+          <h5>{{utilPlaceholder}}</h5>
+          <label for="">{{phoneBillPlaceholder}}</label>
+          <div class='input-group'>
+              <span class="input-group-addon">$</span>
+              <input type="number" ng-change='getHouseMonthlyCosts()'class='form-control' name="phonebill" ng-model='phonebill' value="0" placeholder="{{phoneBillPlaceholder}}">
+          </div>
+          <label for="">{{gasBillPlaceholder}}</label>
+          <div class='input-group'>
+              <span class="input-group-addon">$</span>
+          <input type="number" ng-change='getHouseMonthlyCosts()'class='form-control' name="gasbill" ng-model='gasbill' value="0" placeholder="{{gasBillPlaceholder}}">
+          </div>
+          <label for="">{{electricBillPlaceholder}}</label>
+          <div class='input-group'>
+              <span class="input-group-addon">$</span>
+          <input type="number" ng-change='getHouseMonthlyCosts()'class='form-control' name="electricbill" ng-model='electricbill' value="0" placeholder="{{electricBillPlaceholder}}">
+          </div>
+          <label for="">{{waterBillPlaceholder}}</label>
+          <div class='input-group'>
+              <span class="input-group-addon">$</span>
+          <input type="number" ng-change='getHouseMonthlyCosts()'class='form-control' name="waterbill" ng-model='waterbill' value="0" placeholder="{{waterBillPlaceholder}}">
+          </div>
+          <h5>{{autoPlaceholder}}</h5>
+          <label for="">{{paymentPlaceholder}}</label>
+          <div class='input-group'>
+              <span class="input-group-addon">$</span>
+          <input type="number" ng-change='getHouseMonthlyCosts()'class='form-control' name="payment" ng-model='payment' value="0" placeholder="{{studentPlaceholder}}">
+          </div>
+          <label for="">{{gasOilPlaceholder}}</label>
+          <div class='input-group'>
+              <span class="input-group-addon">$</span>
+          <input type="number" ng-change='getHouseMonthlyCosts()'class='form-control' name="gasoil" ng-model='gasoil' value="0" placeholder="{{gasOilPlaceholder}}">
+          </div>
+          <label for="">{{insurPlaceholder}}</label>
+          <div class='input-group'>
+              <span class="input-group-addon">$</span>
+          <input type="number" ng-change='getHouseMonthlyCosts()'class='form-control' name="insurance" ng-model='insurance' value="0" placeholder="{{insurPlaceholder}}">
+          </div>
+          <label for="">{{repairPlaceholder}}</label>
+          <div class='input-group'>
+              <span class="input-group-addon">$</span>
+          <input type="number" ng-change='getHouseMonthlyCosts()'class='form-control' name="repairs" ng-model='repairs' value="0" placeholder="{{repairPlaceholder}}">
+          </div>
+          <h5>{{medicalPlaceholder}}</h5>
+          <label for="">{{doctorPlaceholder}}</label>
+          <div class='input-group'>
+              <span class="input-group-addon">$</span>
+          <input type="number" ng-change='getHouseMonthlyCosts()'class='form-control' name="doctor" ng-model='doctor' value="0" placeholder="{{doctorPlaceholder}}">
+          </div>
+          <label for="">{{hospitalPlaceholder}}</label>
+          <div class='input-group'>
+              <span class="input-group-addon">$</span>
+              <input type="number" ng-change='getHouseMonthlyCosts()'class='form-control' name="hospital" ng-model='hospital' value="0" placeholder="{{hospitalPlaceholder}}">
+          </div>
+          <label for="">{{medicinePlaceholder}}</label>
+          <div class='input-group'>
+              <span class="input-group-addon">$</span>
+          <input type="number" ng-change='getHouseMonthlyCosts()'class='form-control' name="medicines" ng-model='medicines' value="0" placeholder="{{medicinePlaceholder}}">
+          </div>
+          <h5>{{insurancePlaceholder}}</h5>
+          <label for="">{{lifeInsurancePlaceholder}}</label>
+          <div class='input-group'>
+              <span class="input-group-addon">$</span>
+          <input type="number" ng-change='getHouseMonthlyCosts()'class='form-control' name="linsurance" ng-model='linsurance' value="" placeholder="{{lifeInsurancePlaceholder}}">
+          </div>
+          <label for="">{{medicalInsurancePlaceholder}}</label>
+          <div class='input-group'>
+              <span class="input-group-addon">$</span>
+          <input type="number" ng-change='getHouseMonthlyCosts()'class='form-control' name="minsurance" ng-model='minsurance' value="" placeholder="{{medicalInsurancePlaceholder}}">
+          </div>
+          <label for="">{{totalPlaceholder}} {{total}}</label>
+          <h5>{{mpiPlaceholder}}</h5>
+          <!-- checks if they have a spouse, if they do they will need to add the financial information of teh spouse-->
+          <input type="checkbox" name="othersourceofincome" value="true"><label for="">{{mhiTextPlaceholder}}</label>
+          <br><label for="">{{employmentNetPlaceholder}}</label>
+          <div class='input-group'>
+              <span class="input-group-addon">$</span>
+          <input type="text" class='form-control' name="netemployment" ng-model='netemployment' value="" placeholder="{{employmentNetPlaceholder}}">
+          </div>
+          <label for="">{{ssdPlaceholder}}</label>
+          <div class='input-group'>
+              <span class="input-group-addon">$</span>
+          <input type="text" class='form-control' name="ssd" ng-model='ssd' value="" placeholder="{{employmentNetPlaceholder}}">
+          </div>
+          <label for="">{{ssiPlaceholder}}</label>
+          <div class='input-group'>
+              <span class="input-group-addon">$</span>
+          <input type="text" class='form-control' name="ssi" ng-model='ssi' value="" placeholder="{{ssiPlaceholder}}">
+          </div>
+          <label for="">{{adcPlaceholder}}</label>
+          <div class='input-group'>
+              <span class="input-group-addon">$</span>
+          <input type="text" class='form-control' name="adc" ng-model='adc' value="" placeholder="{{adcPlaceholder}}">
+          </div>
+          <label for="">{{foodStampsPlaceholder}}</label>
+          <div class='input-group'>
+              <span class="input-group-addon">$</span>
+          <input type="text" class='form-control' name="foodstamps" ng-model='foodstamps' value="" placeholder="{{foodStampsPlaceholder}}">
+      </div>
+          <label for="">{{otherIncomePlaceholder}}</label>
+          <textarea class='form-control' name="name" rows="8" cols="80"></textarea>
+          <div class='input-group'>
+              <span class="input-group-addon">$</span>
+          <input type="text" class='form-control' name="other" ng-model='other' value="" placeholder="{{otherIncomePlaceholder}}">
+      </div>
+          <br>
+
+          <div ng-show='hidemF'>
+              <h5>{{msiPlaceholder}}</h5><br><br>
+              <br><label for="">{{employmentNetPlaceholder}}</label>
+              <div class='input-group'>
+                  <span class="input-group-addon">$</span>
+              <input type="text" class='form-control' name="snetemployment" ng-model='snetemployment' value="" placeholder="{{employmentNetPlaceholder}}">
+          </div>
+              <label for="">{{ssdPlaceholder}}</label>
+              <div class='input-group'>
+                  <span class="input-group-addon">$</span>
+              <input type="text" class='form-control' name="sssd" ng-model='sssd' value="" placeholder="{{ssdPlaceholder}}">
+          </div>
+              <label for="">{{ssiPlaceholder}}</label>
+              <div class='input-group'>
+                  <span class="input-group-addon">$</span>
+              <input type="text" class='form-control' name="sssi" ng-model='sssi' value="" placeholder="{{ssiPlaceholder}}">
+          </div>
+              <label for="">{{adcPlaceholder}}</label>
+              <div class='input-group'>
+                  <span class="input-group-addon">$</span>
+              <input type="text" class='form-control' name="sadc" ng-model='sadc' value="" placeholder="{{adcPlaceholder}}">
+          </div>
+              <label for="">{{foodStampsPlaceholder}}</label>
+              <div class='input-group'>
+                  <span class="input-group-addon">$</span>
+              <input type="text" class='form-control' name="sfoodstamps" ng-model='sfoodstamps' value="" placeholder="{{foodStampsPlaceholder}}">
+          </div>
+              <label for="">{{otherIncomePlaceholder}}</label>
+              <div class='input-group'>
+                  <span class="input-group-addon">$</span>
+              <textarea class='form-control' name="name" rows="8" cols="80"></textarea>
+          </div>
+          </div>
+
+          <div ng-show='hidemF'>
+              <h5>{{moiPlaceholder}}</h5><br><br>
+              <br><label for="">{{employmentNetPlaceholder}}</label>
+              <div class='input-group'>
+                  <span class="input-group-addon">$</span>
+              <input type="text" class='form-control' name="onetemployment" ng-model='onetemployment' value="" placeholder="{{employmentNetPlaceholder}}">
+          </div>
+              <label for="">{{ssdPlaceholder}}</label>
+              <div class='input-group'>
+                  <span class="input-group-addon">$</span>
+              <input type="text" class='form-control' name="ossd" ng-model='ossd' value="" placeholder="{{ssdPlaceholder}}">
+          </div>
+              <label for="">{{ssiPlaceholder}}</label>
+              <input type="text" class='form-control' name="ossi" ng-model='ossi' value="" placeholder="{{ssiPlaceholder}}">
+              <div class='input-group'>
+                  <span class="input-group-addon">$</span>
+              </div>
+              <label for="">{{adcPlaceholder}}</label>
+              <div class='input-group'>
+                  <span class="input-group-addon">$</span>
+              </div>
+              <input type="text" class='form-control' name="oadc" ng-model='oadc' value="" placeholder="{{adcPlaceholder}}">
+              <div class='input-group'>
+                  <span class="input-group-addon">$</span>
+              </div>
+              <label for="">{{foodStampsPlaceholder}}</label>
+              <div class='input-group'>
+                  <span class="input-group-addon">$</span>
+              </div>
+              <input type="text" class='form-control' name="ofoodstamps" ng-model='ofoodstamps' value="" placeholder="{{foodStampsPlaceholder}}">
+              <div class='input-group'>
+                  <span class="input-group-addon">$</span>
+              </div>
+              <label for="">{{otherIncomePlaceholder}}</label>
+              <div class='input-group'>
+                  <span class="input-group-addon">$</span>
+              <textarea class='form-control' name="name" rows="8" cols="80"></textarea>
+          </div>
+          </div>
+
+          <label for="">{{totalIncomePlaceholder}}: {{totalIncome}}</label>
+
+          <h5>{{totalAssetsPlaceholder}}</h5>
+          <label for="">{{cabalancePlaceholder}}</label>
+          <div class='input-group'>
+              <span class="input-group-addon">$</span>
+          <input type="text" class='form-control' name="cabalance" ng-model='cabalance' value="" placeholder="{{cabalancePlaceholder}}">
+      </div>
+          <label for="">{{sabalancePlaceholder}}</label>
+          <div class='input-group'>
+              <span class="input-group-addon">$</span>
+          <input type="text" class='form-control' name="sabalance" ng-model='sabalance' value="" placeholder="{{sabalancePlaceholder}}">
+      </div>
+          <label for="">{{homevaluePlaceholder}}</label>
+          <div class='input-group'>
+              <span class="input-group-addon">$</span>
+          <input type="text" class='form-control' name="homevalue" ng-model='homevalue' value="" placeholder="{{homevaluePlaceholder}}">
+      </div>
+
+    <button type="button" class='btn btn-default' ng-click='show()' name="button">Next</button><br><br><br>
+  </div>
+</div>
+
+<div ng-show='racf' class=''>
+  <h1>Rent Assistance Consent Form</h1><br>
+  <label>Applicant's Name</label> <input type="text" class='form-control' name="" ng-model='applicant.name' value="" placeholder="Applicant's Name">
+  <label>Address</label> <input type="text" class='form-control' name="" ng-model='address' value="" placeholder="Address">
+  <label>Landlord/Rental Company</label> <input type="text" class='form-control' name="" ng-model='company' value="" placeholder="Utility Company">
+  <label>Landlord Contact #</label> <input type="text" class='form-control' name="" ng-model='company.phone' value="" placeholder="Company Phone Number">
+  <label>Referred By</label> <input type="text" class='form-control' name="" ng-model='ref' value="" placeholder="Referred by">
+  <label>Renal Clinic</label> <input type="text" class='form-control' name="" ng-model='clinic' value="" placeholder="Renal Clinic">
+  <label>Total Amount Bill</label> <input type="text" class='form-control' name="" ng-model='total' value="" placeholder="Total amount of ibll">
+  <label>Amount Being Requested from NKF AZ</label> <input type="text" class='form-control' name="" ng-model='request' value="" placeholder="Amount being requested from NKF AZ">
+
+  <label>Applicant</label>
+  <input type="text" class='form-control' name="" ng-model='applicant.sign' value="" placeholder="Applicant's Signature">
+  <input type="text" class='form-control' name="" ng-model='date' value="" placeholder="Date">
+
+  <label>Account Holder</label>
+  <input type="text" class='form-control' name="" ng-model='accholder.sign' value="" placeholder="Account Holder's Signature">
+  <input type="text" class='form-control' name="" ng-model='date' value="" placeholder="Date">
+
+  <button type="button" class='btn btn-default' ng-click='show()' name="button">Next</button>
+</div>
+
+<div ng-show='uacf' class=''>
+  <h1>Utility Assistance Consent Form</h1><br>
+  <label>Applicant's Name</label> <input type="text" class='form-control' name="" ng-model='applicant.name' value="" placeholder="Applicant's Name">
+  <label>Address</label> <input type="text" class='form-control' name="" ng-model='address' value="" placeholder="Address">
+  <label>Utility Company</label> <input type="text" class='form-control' name="" ng-model='company' value="" placeholder="Utility Company">
+  <label>Company Phone Number</label> <input type="text" class='form-control' name="" ng-model='company.phone' value="" placeholder="Company Phone Number">
+  <label>Account Number</label> <input type="text" class='form-control' name="" ng-model='account' value="" placeholder="Account Number">
+  <label>Referred By</label> <input type="text" class='form-control' name="" ng-model='ref' value="" placeholder="Referred by">
+  <label>Renal Clinic</label> <input type="text" class='form-control' name="" ng-model='clinic' value="" placeholder="Renal Clinic">
+  <label>Total Amount Bill</label> <input type="text" class='form-control' name="" ng-model='total' value="" placeholder="Total amount of ibll">
+  <label>Amount Being Requested from NKF AZ</label> <input type="text" class='form-control' name="" ng-model='request' value="" placeholder="Amount being requested from NKF AZ">
+
+  <label>Applicant</label>
+  <input type="text" class='form-control' name="" ng-model='applicant.sign' value="" placeholder="Applicant's Signature">
+  <input type="text" class='form-control' name="" ng-model='date' value="" placeholder="Date">
+
+  <label>Account Holder</label>
+  <input type="text" class='form-control' name="" ng-model='accholder.sign' value="" placeholder="Account Holder's Signature">
+  <input type="text" class='form-control' name="" ng-model='date' value="" placeholder="Date">
+
+  <button type="button" class='btn btn-default' ng-click='show()' name="button">Next</button>
+</div>
 
 
 
