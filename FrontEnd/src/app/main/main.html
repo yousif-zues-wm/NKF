@@ -44,9 +44,8 @@
     <label for="address">Address</label>
     <input type="text" class='form-control' name="" ng-model='data.addr' value="" placeholder='Address'>
     <label for="maddress">Mailing Address</label>
-    <!-- add check box to keep same as above -->
-    <input type="text" class='form-control' name="" ng-model='data.maddr' value="" placeholder='Mailing Address'>
-    <input type="radio" name='rad' ng-model="data.maddr" value="false">My main address is the same as my mailing address<br>
+    <input type="text" class='form-control' name="" ng-model='data.addrtxt' ng-disabled="data.addrbtn" value="" placeholder='Mailing Address'>
+    <input type="checkbox" name='rad' ng-model="data.addrbtn" ng-click="data.addrtxt=null" value="true">My mailing address is the same as my normal address<br>
     <label for="dob">Date of Birth</label>
     <input type="date" class='form-control' name="" ng-model='data.dob' value="" placeholder='Date of Birth'>
     <!-- <label for="sworker">Social Worker</label>
@@ -55,7 +54,7 @@
     <input type="text" class='form-control' name="" ng-model='data.sign' value="" placeholder='Electronic Signature'>
     <!-- TODO: add a help box that explains what an electronic signature is -->
     <label for="phone">Phone</label>
-    <input type="text" class='form-control' name="" ng-model='data.phone' value="" placeholder='Phone'>
+    <input type='tel' class='form-control' pattern='[\+]\d{2}[\(]\d{2}[\)]\d{4}[\-]\d{4}' title='Phone Number (Format: +99(99)9999-9999)' placeholder="Phone Number">
     <label for="spouse">Spouse</label>
     <input type="text" class='form-control' name="" ng-model='data.spousetxt' ng-disabled="data.spouse" value="" placeholder='Spouse'>
     <!--<input type="radio" name='rad' ng-model="data.spouse" value="true">Yes-->
