@@ -47,7 +47,6 @@
     $scope.adc = 0
     $scope.foodstamps = 0
     $scope.other = 0
-    $scope.dollarBill = '$'
     $scope.show = function(){
        $scope.hidemF = hidemF == true ? hidemF = false : hidemF = true
     }
