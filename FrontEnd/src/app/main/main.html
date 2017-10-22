@@ -30,7 +30,7 @@
 
 <div class="container">
 <center>
-<div ng-show='!hidemF' class=''>
+<div ng-show='!hidemF' class='' id="baseinfo">
 <br><h1>Basic Information</h1><br>
 
 
@@ -210,6 +210,87 @@
     <input type="text" class="form-control" name="spouse" value="">
 
     <label for=""></label>
+</div>
+
+<div ng-show='!hidemF' class=''>
+  <h1>Renal Regitry</h1><br>
+  <label>Name (Last, First, Middle)</label>
+  <input type="text" class='form-control' name="" ng-model='applicant.lName' value="" placeholder="Last Name">
+  <input type="text" class='form-control' name="" ng-model='applicant.fName' value="" placeholder="First Name">
+  <input type="text" class='form-control' name="" ng-model='applicant.mName' value="" placeholder="Middle Name">
+
+  <label>Birth Date</label> <input type="date" class='form-control' name="" ng-model='dob' value="" placeholder="Birth Date">
+  <label>Street Address</label> <input type="text" class='form-control' name="" ng-model='address' value="" placeholder="Street Address">
+  <label>Telephone Number</label> <input type="text" class='form-control' name="" ng-model='dob' value="" placeholder="Telephone Number">
+  <label>City</label> <input type="text" class='form-control' name="" ng-model='city' value="" placeholder="City">
+  <label>State</label> <input type="text" class='form-control' name="" ng-model='state' value="" placeholder="State">
+  <label>Country</label> <input type="text" class='form-control' name="" ng-model='country' value="" placeholder="Country">
+  <label>Zip Code</label> <input type="number" class='form-control' name="" ng-model='zip' value="" placeholder="Zip Code">
+  <label>Employer</label> <input type="text" class='form-control' name="" ng-model='employer' value="" placeholder="Employer">
+  <label>Marital Status</label> <input type="text" class='form-control' name="" ng-model='married' value="" placeholder="Marital Status">
+  <label>Spouse/Next of kin</label> <input type="text" class='form-control' name="" ng-model='spouse' value="" placeholder="Spouse/Next of kin">
+  <label>No. of Dependents</label> <input type="number" class='form-control' name="" ng-model='num-dependents' value="" placeholder="Number of Dependents">
+  <label>Facility Providing Treatment</label> <input type="text" class='form-control' name="" ng-model='facility' value="" placeholder="Facility Providing Treatment">
+  <label>Month/Day and Year of First Dialysis</label> <input type="text" class='form-control' name="" ng-model='first.dialysis' value="" placeholder="Month/Day and Year of First Dialysis">
+  <label>Month and Year of Transplant</label> <input type="text" class='form-control' name="" ng-model='transplant.time' value="" placeholder="Month and Year of Transplant">
+  <label>Physician</label> <input type="text" class='form-control' name="" ng-model='physician' value="" placeholder="Physician">
+
+  <label>Demographic (OPTIONAL)</label></br>
+  <label>Choose One:</label>
+  <div class="cts-group ">
+    <label for="radio100" class="radio-inline"><input name="group100" type="radio" id="radio100">White</label>
+    <label for="radio101" class="radio-inline"><input name="group100" type="radio" id="radio101">Black</label>
+    <label for="radio102" class="radio-inline"><input name="group100" type="radio" id="radio102">Asian</label>
+    <label for="radio103" class="radio-inline"><input name="group100" type="radio" id="radio103">American Indian</label>
+    <label for="radio104" class="radio-inline"><input name="group100" type="radio" id="radio104">Other</label>
+  </div>
+  <label>Choose One:</label>
+  <div class="cts-group ">
+    <label for="radio105" class="radio-inline"><input name="group101" type="radio" id="radio105">Hispanic</label>
+    <label for="radio106" class="radio-inline"><input name="group101" type="radio" id="radio106">Non-Hispanic</label>
+  </div>
+  <label>I am an enrolled member of the following tribal community, village, reservation, or nation - Choose One:</label>
+  <div class="cts-group ">
+    <label for="radio105" class="radio-inline"><input name="group101" type="radio" id="radio105">Ak-Chin Indian Community</label>
+    <label for="radio106" class="radio-inline"><input name="group101" type="radio" id="radio106">Yavapai Apache Nation</label>
+    <label for="radio107" class="radio-inline"><input name="group101" type="radio" id="radio107">Navajo Nation</label>
+    <label for="radio108" class="radio-inline"><input name="group101" type="radio" id="radio108">Cocopah Indian Reservation</label>
+    <label for="radio109" class="radio-inline"><input name="group101" type="radio" id="radio109">Colorado River Indian Tribe</label>
+    <label for="radio110" class="radio-inline"><input name="group101" type="radio" id="radio110">White Mountain Apache Tribe</label>
+    <label for="radio111" class="radio-inline"><input name="group101" type="radio" id="radio111">Fort McDowell Yavapai Nation</label>
+    <label for="radio112" class="radio-inline"><input name="group101" type="radio" id="radio112">Hualapai Tribe</label>
+    <label for="radio113" class="radio-inline"><input name="group101" type="radio" id="radio113">Kaibab-Pauite Tribe</label>
+    <label for="radio114" class="radio-inline"><input name="group101" type="radio" id="radio114">Pascua Yaqui Tribe</label>
+    <label for="radio115" class="radio-inline"><input name="group101" type="radio" id="radio115">Fort Mohave Indian Tribe</label>
+    <label for="radio116" class="radio-inline"><input name="group101" type="radio" id="radio116">Gila River Indian Community</label>
+    <label for="radio117" class="radio-inline"><input name="group101" type="radio" id="radio117">Havasupai Indian Reservation</label>
+    <label for="radio118" class="radio-inline"><input name="group101" type="radio" id="radio118">Hopi Tribe</label>
+    <label for="radio119" class="radio-inline"><input name="group101" type="radio" id="radio119">Salt River Pima-Maricopa</label>
+    <label for="radio120" class="radio-inline"><input name="group101" type="radio" id="radio120">San Carlos Apache</label>
+    <label for="radio121" class="radio-inline"><input name="group101" type="radio" id="radio121">Tohono O-odham Nation</label>
+    <label for="radio122" class="radio-inline"><input name="group101" type="radio" id="radio122">Tonto Apache Tribe</label>
+    <label for="radio123" class="radio-inline"><input name="group101" type="radio" id="radio123">Fort Yuma - Quechan Tribe</label>
+    <label for="radio124" class="radio-inline"><input name="group101" type="radio" id="radio124">San Juan Southern Paiute Tribe</label>
+    <div class="cts-group">
+      <div class="radio">
+        <label class="radio-inline control-label"><input type="radio" id="radio125" name="group101">Other</label>
+      </div>
+    </div>
+    <div class="cts-group">
+      <input placeholder="Other" type="text" class="form-control" id="amount_actual" name="group101" maxlength="5" data-rule-required="true" contenteditable="false">
+    </div>
+  </div>
+
+  <label>Applicant</label>
+  <input type="text" class='form-control' name="" ng-model='applicant.sign' value="" placeholder="Signature">
+  <input type="text" class='form-control' name="" ng-model='date' value="" placeholder="Date">
+  <label>Facility Representative</label>
+  <input type="text" class='form-control' name="" ng-model='rep.sign' value="" placeholder="Signature">
+  <input type="text" class='form-control' name="" ng-model='rep.name' value="" placeholder="Print Name">
+  <input type="text" class='form-control' name="" ng-model='facility' value="" placeholder="Facility">
+
+
+  <button type="button" class='btn btn-default' ng-click='show()' name="button">Next</button>
 </div>
 
 </center>
