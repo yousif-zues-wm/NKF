@@ -1,34 +1,207 @@
-<div class="container">
-
-  <div>
-    <acme-navbar creation-date="main.creationDate"></acme-navbar>
-  </div>
-
-  <div class="jumbotron text-center">
-    <h1>'Allo, 'Allo!</h1>
-    <p class="lead">
-      <img src="assets/images/yeoman.png" alt="I'm Yeoman"><br>
-      Always a pleasure scaffolding your apps.
-    </p>
-    <p class="animated infinite" ng-class="main.classAnimation">
-      <button type="button" class="btn btn-lg btn-success" ng-click="main.showToastr()">Splendid Toastr</button>
-    </p>
-    <p>
-      With ♥ thanks to the contributions of<acme-malarkey extra-values="['Yeoman', 'Gulp', 'Angular']"></acme-malarkey>
-    </p>
-  </div>
-
-  <div class="row">
-    <div class="col-sm-6 col-md-4" ng-repeat="awesomeThing in main.awesomeThings | orderBy:'rank'">
-      <div class="thumbnail">
-        <img class="pull-right" ng-src="assets/images/{{ awesomeThing.logo }}" alt="{{ awesomeThing.title }}">
-        <div class="caption">
-          <h3>{{ awesomeThing.title }}</h3>
-          <p>{{ awesomeThing.description }}</p>
-          <p><a ng-href="{{awesomeThing.url}}">{{ awesomeThing.url }}</a></p>
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Logo</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+          <li class="dropdown"><a>MEDICAL</a></li>
+          <div class="dropdown-content">
+            <a ng-click='dentalShow()'>Dental</a>
+            <a>Meds app</a>
+            <a>Meds Transplant</a>
+            <a>Renal Begist</a>
+          </div>
+          <li class="dropdown"><a>LIVING</a></li>
+          <div class="dropdown-content">
+            <a ng-click='carShow()'>Car Payment/Repair</a>
+            <a>Utility</a>
         </div>
-      </div>
+          <li class="dropdown"><a>FINANCIAL</a></li>
+            <div class="dropdown-content">
+              <a>English</a>
+              <a>Spanish</a>
+            </div>
+            <li><a ng-click='scholShow()'>SCHOLARSHIP</a></li>
+      </ul>
     </div>
   </div>
+</nav>
+
+<div class="container">
+<center>
+<div ng-show='!hidemF' class=''>
+<h1>Form One</h1><br>
+
+
+  <label for="fname">First Name</label>  <input type="text" class='form-control' name="fname" ng-model='data.fname' value="" placeholder='Firstname'>
+    <input type="text" class='form-control' name="" ng-model='data.lname' value="" placeholder='Lastname'>
+    <input type="text" class='form-control' name="" ng-model='data.addr' value="" placeholder='Address'>
+    <input type="text" class='form-control' name="" ng-model='data.maddr' value="" placeholder='Mailing Address'>
+    <input type="date" class='form-control' name="" ng-model='data.dob' value="" placeholder='Date of Birth'>
+    <input type="text" class='form-control' name="" ng-model='data.sworker' value="" placeholder='Social Worker'>
+    <input type="text" class='form-control' name="" ng-model='data.sign' value="" placeholder='Signature'>
+    <input type="text" class='form-control' name="" ng-model='data.phone' value="" placeholder='Phone'>
+    <label for="rad">Spouse</label>
+    <input type="radio" name='rad' ng-model="data.spouse" value="true">Yes
+  <input type="radio" name='rad' ng-model="data.spouse" value="false">No
+  </form>
+  <button type="button" class='btn btn-default' ng-click='show()' name="button">Next</button>
+</div>
+
+
+
+
+<div ng-show='carS' class='' >
+      <h1>Car Payment/Rental Assistance Consent</h1><br>
+      <form class="from">
+      <label for="fname">First Name</label>  <input type="text" class='form-control' name="fname" ng-model='data.fname' value="" placeholder='First Name'>
+      <input type="text" class='form-control' name="" ng-model='data.lname' value="" placeholder='Last Name'>
+      <input type="text" class='form-control' name="" ng-model='data.addr' value="" placeholder='Address'>
+      <input type="text" class='form-control' name="" ng-model='car.loanNum' value="" placeholder='Loan Number'>
+      <input type="text" class='form-control' name="" ng-model='car.ref' value="" placeholder='Referred By'>
+      <input type="text" class='form-control' name="" ng-model='car.unit' value="" placeholder='Unit'>
+      <input type="number" class='form-control' name="" ng-model='car.total' value="" placeholder='Total Amount of Bill'>
+      <input type="number" class='form-control' name="" ng-model='car.request' value="" placeholder='Amount of Request from NKF AZ'>
+      <!-- License Agreement -->
+      <input type="text" class='form-control' name="" ng-model='data.sign' value="" placeholder='Electronic Signature'>
+
+      </form>
+    </div>
+
+
+ <div ng-show='dentalS' class='' >
+   <h3>Dental Care (FOR NEPHROLOGIST ONLY) </h3><br>
+   <form class="form">
+   <!-- Autofill Date-->
+   <!-- Patient Name-->
+   <input type="text" class='form-control' name="" ng-model='data.tfacil' value="" placeholder='Treatment Facility'><br>
+   <!-- DOB-->
+   <label for="fonfile">Current patient Financial Statement on file </label>
+   <input type="checkbox"  name="fonfile" ng-model='fonfile' ng-true-value="true" ng-false-value="false"><br>
+   <label for="hinsurance"> Patient has AHCCCS or ALTCS health insurance </label>
+   <input type="checkbox"  name="hinsurance" ng-model='hinsurance' ng-true-value="true" ng-false-value="false"><br>
+   <label for="dins"> Current patient has dental insurance </label>
+   <input type="checkbox"  name="dins" ng-model='dins' ng-true-value="true" ng-false-value="false"><br>
+   <label for="need4care"> Statemenet of Need for Dental Care </label>
+   <input type="checkbox" name="need4care" ng-true-value="true" ng-false-value="false"><br>
+   <label for="ptransport"> Patient is preparing for transporation </label>
+   <input type="checkbox" name="ptransport" ng-true-value="true" ng-false-value="false"><br>
+   <textarea name="fneed" placeholder="Statement of Financial Need" rows="8" cols="80"></textarea><hr>
+
+   <!-- If the patient is not preparing for transportation ask to upload a letter from the renal dietitian or the patient's nephrologist
+   that documents how the need for dental care is compromising the patient's health-->
+   <!-- If yes, type in transplant center:
+   -->
+   <input type="text" class='form-control' name="" ng-model='data.tcenter' value="" placeholder='Transplant Center'><br>
+
+   <label for="tclear">Has all other testing been cleared for transplant?</label>
+    <input type="checkbox" name="tclear" ng-model='tclear' ng-true-value="true" ng-false-value="false"><br>
+   <!-- if no --> <label for="infection">Does the patient have oral pain or infection?</label>
+    <input type="checkbox" class='' name="infection" ng-model='infection' ng-true-value="true" ng-false-value="false"><br>
+   <input type="nsig" class='form-control' name="" ng-model='data.nsig' value="" placeholder='Nephrologist Signature'>
+ </form>
+ </div>
+
+<div ng-show='schol' class="">
+  <label>This Application is for: </label>
+        <div class="cts-group ">
+          <label for="radio100" class="radio-inline"><input name="group100" type="radio" id="radio100">New</label>
+          <label for="radio101" class="radio-inline"><input name="group100" type="radio" id="radio101">Continuing Assitance</label>
+        </div>
+
+        <label>Name</label>  <input type="text" class='form-control' name="" ng-model='name' value="" placeholder='Name'>
+        <label>Age</label>  <input type="text" class='form-control' name="" ng-model='age' value="" placeholder='Age'>
+        <label>Birthday</label>  <input type="date" class='form-control' name="" ng-model='bday' value="" placeholder='Birthday'>
+        <label>Home Address</label>  <input type="text" class='form-control' name="" ng-model='address' value="" placeholder='Home Address'>
+        <label>City</label>  <input type="text" class='form-control' name="" ng-model='city' value="" placeholder='City'>
+        <label>State</label>  <input type="text" class='form-control' name="" ng-model='state' value="" placeholder='State'>
+        <label>Zip</label>  <input type="text" class='form-control' name="" ng-model='zip' value="" placeholder='Zip'>
+        <label>Home Phone</label>  <input type="text" class='form-control' name="" ng-model='hphone' value="" placeholder='Home Phone'>
+        <label>Business</label>  <input type="text" class='form-control' name="" ng-model='business' value="" placeholder='Business'>
+        <label>Present Employer</label>  <input type="text" class='form-control' name="" ng-model='employer' value="" placeholder='Present Employer'>
+        <label>Business Phone</label>  <input type="text" class='form-control' name="" ng-model='bphone' value="" placeholder='Business Phone'>
+
+        <label>Current Treatment Status</label>
+        <div class="cts-group ">
+          <label for="radio102" class="radio-inline"><input name="group101" type="radio" id="radio102">Hemodialysis</label>
+          <label for="radio103" class="radio-inline"><input name="group101" type="radio" id="radio103">PD</label>
+          <label for="radio104" class="radio-inline"><input name="group101" type="radio" id="radio104">Transplant</label>
+        </div>
+
+        <label>Name of Physician</label>  <input type="text" class='form-control' name="" ng-model='pname' value="" placeholder='Name of Physician'>
+        <label>Name of Dialysis Facility or Transplant Center</label>  <input type="text" class='form-control' name="" ng-model='dfname' value="" placeholder='Name of Dialysis Facility or Transplant Center'>
+        <label>Name of Social Worker</label>  <input type="text" class='form-control' name="" ng-model='swname' value="" placeholder='Name of Social Worker'>
+
+        <label>Current Treatment Status</label>
+        <div class="cts-group ">
+          <label for="radio105" class="radio-inline"><input name="group102" type="radio" id="radio105">Single</label>
+          <label for="radio106" class="radio-inline"><input name="group102" type="radio" id="radio106">Married</label>
+        </div>
+
+        <label>Children: </label>
+        <input type="number" class='form-control' name="" ng-model='numchild' value="" placeholder='Number'>
+        <input type="number" class='form-control' name="" ng-model='agechild' value="" placeholder='Age'>
+
+        <label>Education Level Completed</label>  <input type="text" class='form-control' name="" ng-model='education' value="" placeholder='Education Level Completed'>
+        <label>Carer Objective</label>  <input type="text" class='form-control' name="" ng-model='career' value="" placeholder='Career Objective'>
+        <label>Anticipated Academic Major</label>  <input type="text" class='form-control' name="" ng-model='major' value="" placeholder='Anticipated Academic Major'>
+        <label>Name of Institution</label>  <input type="text" class='form-control' name="" ng-model='iname' value="" placeholder='Name of Institution'>
+        <label>Semester for which Assistance is Sought</label>  <input type="text" class='form-control' name="" ng-model='semforassistance' value="" placeholder='Semester for which Assistance is Sought'>
+        <label>Name of Institution</label>  <input type="date" class='form-control' name="" ng-model='rdate' value="" placeholder='Name of Institution'>
+
+        <div class="form-group">
+          <label for="aclasses">List of Anticipated Classes:</label>
+          <textarea class="form-control" rows="5" id="aclasses" placeholder='List of Anticipated Classes'></textarea>
+        </div>
+
+        <label>Amount of Financial Assistance Requested:</label>
+        <input type="text" class='form-control' name="" ng-model='tuiton' value="" placeholder='Tuition'>
+        <input type="text" class='form-control' name="" ng-model='books' value="" placeholder='Books and Supplies'>
+        <input type="text" class='form-control' name="" ng-model='other' value="" placeholder='Other'>
+        <input type="text" class='form-control' name="" ng-model='total' value="" placeholder='Total Amount Requested'>
+        <input type="date" class='form-control' name="" ng-model='fundsdate' value="" placeholder='Data Funds are Requested'>
+
+        <div class="form-group">
+          <label for="aclasses">Because the National Kidney Foundation of Arizona is the last resort for tuition assistance, what other agencies have you applied to for assistance</label>
+          <textarea class="form-control" rows="5" id="aclasses"></textarea>
+        </div>
+
+        <label>Do you qualify for vocational rehabilitation?</label>
+        <div class="cts-group ">
+          <label for="radio107" class="radio-inline"><input name="group103" type="radio" id="radio107">Yes</label>
+          <label for="radio108" class="radio-inline"><input name="group103" type="radio" id="radio108">No</label>
+        </div>
+
+        <label>If yes, what type of assistance are you receiving?</label>  <input type="text" class='form-control' name="" ng-model='typeofassistance' value="" placeholder='If yes, what type of assitance are you receiving?'>
+
+        <div class="form-group">
+          <label for="aclasses">Reasons you believe financial assistance should be granted.</label>
+          <textarea class="form-control" rows="5" id="aclasses" placeholder="Reasons you believe financial assistance should be granted."></textarea>
+        </div>
+
+        <label>For a scholarhip interview, I would be available on</label>  <input type="date" class='form-control' name="" ng-model='typeofassistance' value="" placeholder='For a scholarship interview, I would be available on'>
+        <label>Signature</label>  <input type="date" class='form-control' name="" ng-model='sign' value="" placeholder='Signature'>
+        <label>Date</label>  <input type="date" class='form-control' name="" ng-model='date' value="" placeholder='Date'><br>
+</div>
+
+
+</center>
+
+
+
+<div class="footer">
+  <a href="https://azkidney.org/privacy-statement">Privacy Statement | </a>
+  <a href="https://azkidney.org/terms-of-use">Terms of Use | </a>
+  <a href="https://azkidney.org/contact-us">Contact Us  </a>
+</div>
+
+
+
 
 </div>
