@@ -228,6 +228,15 @@
     <h5>Utilities</h5>
     <label for="">Phone Bill</label>
     <input type="number" ng-change='getHouseMonthlyCosts()'class='form-control' name="phonebill" ng-model='phonebill' value="0" placeholder="Phone Bill">
+    <form id="form" method="post" action="">
+    <p>
+        <label for="amount">Enter amount</label>
+        <div class="flex">
+            <span class="form-control-currency">$</span>
+            <input id="amount" name="amount" class='form control' type="text" maxlength="15" />
+        </div>
+    </p>
+</form>
     <label for="">Gas Bill</label>
     <input type="number" ng-change='getHouseMonthlyCosts()'class='form-control' name="gasbill" ng-model='gasbill' value="0" placeholder="Gas Bill">
     <label for="">Electric Bill</label>
@@ -277,15 +286,15 @@
     <div ng-show='hidemF'>
         <h5>Source of Household Income from Spouse</h5><br><br>
         <br><label for="">Employement (Net)</label>
-        <input type="text" class='form-control' name="onetemployment" ng-model='onetemployment' value="" placeholder="Employment (Net)">
+        <input type="text" class='form-control' name="snetemployment" ng-model='snetemployment' value="" placeholder="Employment (Net)">
         <label for="">Social Security Disability</label>
-        <input type="text" class='form-control' name="ossd" ng-model='ossd' value="" placeholder="Social Security Disability">
+        <input type="text" class='form-control' name="sssd" ng-model='sssd' value="" placeholder="Social Security Disability">
         <label for="">SSI</label>
-        <input type="text" class='form-control' name="ossi" ng-model='ossi' value="" placeholder="SSI">
+        <input type="text" class='form-control' name="sssi" ng-model='sssi' value="" placeholder="SSI">
         <label for="">ADC</label>
-        <input type="text" class='form-control' name="oadc" ng-model='oadc' value="" placeholder="ADC">
+        <input type="text" class='form-control' name="sadc" ng-model='sadc' value="" placeholder="ADC">
         <label for="">Food stamps</label>
-        <input type="text" class='form-control' name="ofoodstamps" ng-model='ofoodstamps' value="" placeholder="Food Stamps">
+        <input type="text" class='form-control' name="sfoodstamps" ng-model='sfoodstamps' value="" placeholder="Food Stamps">
         <label for="">Other:</label>
         <textarea class='form-control' name="name" rows="8" cols="80"></textarea>
     </div>
@@ -305,6 +314,26 @@
         <label for="">Other:</label>
         <textarea class='form-control' name="name" rows="8" cols="80"></textarea>
     </div>
+
+    <label for="">Total Amount of Income: {{totalIncome}}</label>
+
+    <h5>Total Amount of Assets</h5>
+    <label for="">Checking Account Balance</label>
+    <input type="text" class='form-control' name="cabalance" ng-model='cabalance' value="" placeholder="Checking Account Balance">
+    <label for="">Savings Account Balance</label>
+    <input type="text" class='form-control' name="sabalance" ng-model='sabalance' value="" placeholder="Savings Account Balance">
+    <label for="">Home Assessed Value</label>
+    <input type="text" class='form-control' name="homevalue" ng-model='homevalue' value="" placeholder="Home Assessed Value">
+    <label for="">Car Year</label>
+    <input type="text" class='form-control' name="caryear" ng-model='caryear' value="" placeholder="Car Year">
+    <label for="">Car Make</label>
+    <input type="text" class='form-control' name="carmake" ng-model='carmake' value="" placeholder="Car Make">
+    <!-- get leinholder from previous if necessary -->
+    <label for="">Other property such as stocks, bonds, real estate, etc.</label>
+    <input type="text" class='form-control' name="prop" ng-model='prop' value="" placeholder="Other Assets">
+    <label for="">Electronic Signature</label>
+    <input type="text" class='form-control' name="esignature" ng-model='esignature' value="" placeholder="Electronic Signature">
+    <!-- optional demographic information?-->
 </div>
 
 <div ng-show='hidemF' id="renalregistry" class=''>

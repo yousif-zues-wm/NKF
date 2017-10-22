@@ -40,6 +40,7 @@
     $scope.nums = 0
     $scope.contentNums = 0
     $scope.getHouseMonthlyCosts =0
+    $scope.totalIncome = 0;
 
     $scope.show = function(){
        $scope.hidemF = hidemF == true ? hidemF = false : hidemF = true
