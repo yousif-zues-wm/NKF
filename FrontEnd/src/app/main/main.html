@@ -37,8 +37,8 @@
     <label for="fname">First Name</label>
     <input type="text" class='form-control' name="fname" ng-model='data.fname' value="" placeholder='First Name'>
     <label for="mname">Middle Name</label>
-    <input type="text" class='form-control' name="" ng-model='data.mname' value="true" placeholder='Middle Name'>
-    <input type="radio" name='rad' ng-model="data.mname" value="false">I don't have a middle name<br>
+    <input type="text" class='form-control' name="" ng-model='data.mnametxt' ng-disabled="data.mname" value="" placeholder='Middle Name'>
+    <input type="checkbox" name='rad' ng-model="data.mname" ng-click="data.mnametxt=null" value="true">I don't have a middle name<br>
     <label for="lname">Last Name</label>
     <input type="text" class='form-control' name="" ng-model='data.lname' value="" placeholder='Last Name'>
     <label for="address">Address</label>
@@ -57,9 +57,9 @@
     <label for="phone">Phone</label>
     <input type="text" class='form-control' name="" ng-model='data.phone' value="" placeholder='Phone'>
     <label for="spouse">Spouse</label>
-    <input type="text" class='form-control' name="" ng-model='data.spouse' value="" placeholder='Spouse'>
+    <input type="text" class='form-control' name="" ng-model='data.spousetxt' ng-disabled="data.spouse" value="" placeholder='Spouse'>
     <!--<input type="radio" name='rad' ng-model="data.spouse" value="true">Yes-->
-  <input type="radio" name='rad' ng-model="data.spouse" value="false">I don't have a spouse
+  <input type="checkbox" name='rad' ng-model="data.spouse" ng-click="data.spousetxt=null" value="true">I don't have a spouse
   <!-- how to greyout a text field if a certain button is clicked -->
   </form>
   <button type="button" class='btn btn-default' ng-click='show()' name="button">Next</button><br><br><br>
