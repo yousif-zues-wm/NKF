@@ -777,6 +777,51 @@
     <!-- optional demographic information?-->
 </div>
 
+<div ng-show='!hidemF' id="requiredinfo" class=''>
+    <!-- date-->
+    <label for="">First Name</label>
+    <input type="text" class='form-control' name="fname" ng-model='data.fname' value="" placeholder='First Name'>
+    <input type="text" class='form-control' name="" ng-model='applicant.lName' value="" placeholder="Last Name">
+    <input type="text" class='form-control' name="" ng-model='applicant.fName' value="" placeholder="First Name">
+    <input type="text" class='form-control' name="" ng-model='applicant.mName' value="" placeholder="Middle Name">
+    <label>Birth Date</label> <input type="date" class='form-control' name="" ng-model='dob' value="" placeholder="Birth Date">
+    <label for="">SSN</label> <input type="number" ckass='form-control' name="" ng-model='socialsn' value="" placeholder"SSN">
+    <label for="">Treatment Facility</label> <input type="number" ckass='form-control' name="" ng-model='tfacility' value="" placeholder"Treatment Facility">
+    <label>Name of Social Worker</label>  <input type="text" class='form-control' name="" ng-model='swname' value="" placeholder='Name of Social Worker'>
+    <label for="">Date of Transplant</label> <label>Name of Social Worker</label>  <input type="date" class='form-control' name="" ng-model='doftransplant' value="" placeholder='Date of Transplant'>
+    <label>Name of Social Worker</label> <input type="text" class='form-control' name="" ng-model='sworkername' value="" placeholder="Name of Social Worker">
+    <h5>Secondary Insurance</h5>
+
+    <label for="">Date Applied </label><input type="date" class='form-control' name="" ng-model='sdateapplied' value="" placeholder='Date Applied'>
+
+    <label for="">Status of Secondary Insurance</label>
+    <select>
+        <option value="spend">Pending</option>
+        <option value="saccept">Accepted</option>
+        <option value="sdenied">Denied</option>
+    </select>
+    <h5>AHCCCS</h5>
+    <label for="">Date Applied</label><input type="date" class='form-control' name="" ng-model='adateapplied' value="" placeholder='Date Applied'>
+    <label for="">Status of AHCCCS</label>
+    <select>
+        <option value="ahcccsp">Pending</option>
+        <option value="ahcccsa">Accepted</option>
+        <option value="ahcccsd">Denied</option>
+    </select>
+    <br>
+    <label for="">Medication Name</label> <input type="text" class='form-control' name="" ng-model='medname' value="" placeholder="Medication Name">
+    <label for="">Dosage</label> <input type="text" class='form-control' name="" ng-model='dosage' value="" placeholder="Dosage">
+    <label for="">Quantity</label> <input type="text" class='form-control' name="" ng-model='quantity' value="" placeholder="Quantity">
+    <label for="">Refills?</label> <input type="checkbox" name="" value="true"><br>
+    <label for="">Prescribing Physician</label> <input type="text" class='form-control' name="" ng-model='presphysician' value="" placeholder="Prescribing Physician">
+    <label for="">Pharmeceutical Date Applied</label> <input type="date" class='form-control' name="" ng-model='pdate' value="" placeholder="Pharmeceuitcal Date Applied">
+<label for=""></label>
+    <select>
+        <option value="ahcccsp">Pending</option>
+        <option value="ahcccsa">Accepted</option>
+        <option value="ahcccsd">Denied</option>
+    </select>
+
 <div ng-show='hidemF' id="renalregistry" class=''>
   <h1>Renal Regitry</h1><br>
   <label>Name (Last, First, Middle)</label>
