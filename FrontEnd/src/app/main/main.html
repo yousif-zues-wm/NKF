@@ -38,7 +38,7 @@
     <input type="text" class='form-control' name="fname" ng-model='data.fname' value="" placeholder='First Name'>
     <label for="mname">Middle Name</label>
     <input type="text" class='form-control' name="" ng-model='data.mname' value="true" placeholder='Middle Name'>
-    <input type="radio" name='mnamebutton' ng-model="data.mname" value="false">I don't have a middle name<br>
+    <input type="radio" name='rad' ng-model="data.mname" value="false">I don't have a middle name<br>
     <label for="lname">Last Name</label>
     <input type="text" class='form-control' name="" ng-model='data.lname' value="" placeholder='Last Name'>
     <label for="address">Address</label>
@@ -46,12 +46,14 @@
     <label for="maddress">Mailing Address</label>
     <!-- add check box to keep same as above -->
     <input type="text" class='form-control' name="" ng-model='data.maddr' value="" placeholder='Mailing Address'>
+    <input type="radio" name='rad' ng-model="data.maddr" value="false">My main address is the same as my mailing address<br>
     <label for="dob">Date of Birth</label>
     <input type="date" class='form-control' name="" ng-model='data.dob' value="" placeholder='Date of Birth'>
-    <label for="sworker">Social Worker</label>
-    <input type="text" class='form-control' name="" ng-model='data.sworker' value="" placeholder='Social Worker'>
-    <label for="signature">Signature</label>
-    <input type="text" class='form-control' name="" ng-model='data.sign' value="" placeholder='Signature'>
+    <!-- <label for="sworker">Social Worker</label>
+    <input type="text" class='form-control' name="" ng-model='data.sworker' value="" placeholder='Social Worker'>-->
+    <label for="signature">Electronic Signature</label>
+    <input type="text" class='form-control' name="" ng-model='data.sign' value="" placeholder='Electronic Signature'>
+    <!-- TODO: add a help box that explains what an electronic signature is -->
     <label for="phone">Phone</label>
     <input type="text" class='form-control' name="" ng-model='data.phone' value="" placeholder='Phone'>
     <label for="spouse">Spouse</label>
@@ -199,6 +201,17 @@
         <label>Date</label>  <input type="date" class='form-control' name="" ng-model='date' value="" placeholder='Date'><br>
 </div>
 
+<div ng-show='schol' class="">
+    <!-- First Name Autofill -->
+    <!-- Middle Name Autofill -->
+    <!-- Last Name Autofill -->
+    <!-- DOB Autofill -->
+    <!-- If they have a spouse-->
+    <label for="spouse">Spouse Name</label>
+    <input type="text" class="form-control" name="spouse" value="">
+
+    <label for=""></label>
+</div>
 
 </center>
 
